@@ -13,7 +13,8 @@
   <%= content_tag :div, message, class: "flash_#{type}" %>
   <% end %>
   <% if current_user %>
-  Welcome, <%= current_user.username %>
+    Welcome, <%= current_user.username %>
+    <%= link_to "Logout", logout_path, method: :delete %>
   <% else %>
 
   <% end %>
