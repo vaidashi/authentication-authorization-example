@@ -8,8 +8,6 @@ RSpec.feature "User logs out" do
     }
 
     user = User.create(user_attributes)
-
-    ApplicationController.any_instance.stub(:current_user).and_return(user)
   
     visit user_path(user)
     click_on "Logout"
